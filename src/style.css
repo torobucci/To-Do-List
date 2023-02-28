@@ -1,3 +1,65 @@
-body{
-    background-color: bisque;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(214, 207, 198);
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  width: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-size: inherit;
+  font-style: italic;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(211, 206, 206);
+  padding: 10px;
+}
+
+.ul-container {
+  width: 80vw;
+  border: 1px solid rgb(199, 196, 196);
+  box-shadow: 0 0 5px 4px rgb(163, 156, 156);
+  margin: 5% auto;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.last {
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: rgb(155, 151, 151);
+  background-color: lightgrey;
+}
+
+#checkbox {
+  margin-right: 10px;
+}
+
+.fa-solid {
+  cursor: pointer;
+  color: rgb(192, 190, 190);
+}
+
+.fa-arrow-turn-down {
+  transform: rotate(90deg);
+  font-size: 10px;
 }
