@@ -11,9 +11,12 @@ p {
 }
 
 input {
-  width: inherit;
   background-color: inherit;
   border: none;
+}
+
+.addToDo {
+  width: 100%;
 }
 
 input:focus {
@@ -42,6 +45,11 @@ li {
   background-color: aliceblue;
 }
 
+.ul-2 {
+  padding: 0;
+  margin: 0;
+}
+
 .last {
   display: flex;
   justify-content: center;
@@ -62,4 +70,8 @@ li {
 .fa-arrow-turn-down {
   transform: rotate(90deg);
   font-size: 10px;
+}
+
+.hover-list {
+  background-color: rgba(255, 255, 0, 0.829);
 }
