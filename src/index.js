@@ -63,7 +63,7 @@ addToDo.addEventListener('change', () => {
   }
 });
 function removeItem(item) {
-  toDoData = toDoData.filter((data) => data.description !== item);
+  toDoData = toDoData.filter((data) => data.id !== item);
   displayList();
   setItems();
 }
@@ -87,7 +87,9 @@ ul2.addEventListener('click', (event) => {
     });
   }
   if (event.target.classList.contains('fa-trash-can')) {
-    const itemKey = event.target.parentElement.children[0].children[1].value;
+    const parent = event.target.parentElement;
+    const added = document.querySelectorAll('.added');
+    const itemKey = [...added].indexOf(parent);
     removeItem(itemKey);
   }
 });
