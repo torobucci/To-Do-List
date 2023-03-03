@@ -1,6 +1,15 @@
 export const ul2 = document.querySelector('.ul-2');
 export function displayList(toDoData) {
   ul2.innerHTML = '';
+  toDoData.sort((a, b) => {
+    if (a.completed) {
+      return 1;
+    }
+    if (b.completed) {
+      return -1;
+    }
+    return a < b;
+  });
   toDoData.forEach((data, i) => {
     data.id = i + 1;
     const li = document.createElement('li');
@@ -11,6 +20,7 @@ export function displayList(toDoData) {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'checkbox';
+    checkbox.className = 'checkbox';
     p.appendChild(checkbox);
     const textContent = document.createElement('input');
     textContent.className = 'input-text';
@@ -21,6 +31,9 @@ export function displayList(toDoData) {
     const icon = document.createElement('i');
     icon.className = 'fa-solid fa-ellipsis-vertical';
     li.appendChild(icon);
+    /* if(data.completed){
+        checkbox.setAttribute('checked','checked')
+    } */
   });
   if (document.querySelectorAll('.added')) {
     const added = document.querySelectorAll('.added');
