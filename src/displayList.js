@@ -11,6 +11,7 @@ export function displayList(toDoData) {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'checkbox';
+    checkbox.className = 'checkbox';
     p.appendChild(checkbox);
     const textContent = document.createElement('input');
     textContent.className = 'input-text';
@@ -21,6 +22,9 @@ export function displayList(toDoData) {
     const icon = document.createElement('i');
     icon.className = 'fa-solid fa-ellipsis-vertical';
     li.appendChild(icon);
+    /* if(data.completed){
+        checkbox.setAttribute('checked','checked')
+    } */
   });
   if (document.querySelectorAll('.added')) {
     const added = document.querySelectorAll('.added');
