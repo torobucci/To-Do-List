@@ -1,15 +1,6 @@
 export const ul2 = document.querySelector('.ul-2');
 export function displayList(toDoData) {
   ul2.innerHTML = '';
-  toDoData.sort((a, b) => {
-    if (a.completed) {
-      return 1;
-    }
-    if (b.completed) {
-      return -1;
-    }
-    return a < b;
-  });
   toDoData.forEach((data, i) => {
     data.id = i + 1;
     const li = document.createElement('li');
